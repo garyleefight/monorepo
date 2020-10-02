@@ -1,6 +1,6 @@
 version: 1
 applications:
-     - appRoot: /angular-tour-of-heroes
+  - appRoot: /angular-tour-of-heroes
     frontend:
       phases:
         preBuild:
