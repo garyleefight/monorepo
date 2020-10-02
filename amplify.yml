@@ -1,0 +1,25 @@
+version: 1
+applications:
+     - appRoot: /angular-tour-of-heroes
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: dist
+        files:
+          - '**/*'
+  - appRoot: /hugo-example
+    frontend:
+      phases:
+        build:
+          commands:
+            - hugo
+      artifacts:
+        baseDirectory: public
+        files:
+          - '**/*'
